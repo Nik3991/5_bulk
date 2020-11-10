@@ -24,7 +24,7 @@ add_executable(${PROJECT_NAME} "main.cpp" ${FILES})
 add_executable(tests tests.cpp)
 
 
-set_target_properties(bulk PROPERTIES
+set_target_properties(bulk tests PROPERTIES
         CXX_STANDART 17
         CXX_STANDART_REQUIRED ON
 if (NOT WIN32)

@@ -23,7 +23,6 @@ SET(FILES ${PROJECT_SOURCE_DIR}/Bulk.h)
 add_executable(${PROJECT_NAME} "main.cpp" ${FILES})
 add_executable(tests tests.cpp)
 
-
 set_target_properties(bulk tests PROPERTIES
         CXX_STANDART 17
         CXX_STANDART_REQUIRED ON
@@ -54,3 +53,7 @@ set(CPACK_PACKAGE_CONTACT nikbar93@gmail.com)
 set(CPACK_DEBIAN_PACKAGE_SHLIBDEPS ON)
 
 include(CPack)
+
+enable_testing()
+
+add_test(run_tests tests)
